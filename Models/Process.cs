@@ -13,7 +13,7 @@ namespace EscAdv.Models
         [Display(Name = "Tipo Processo")]
         public string type { get; set; }
 
-        [Display(Name = "Petição")]
+        [Display(Name = "Número Petição")]
         public string petition { get; set; }
         // [DataType(DataType.Date)]
         // public DateTime created { get; set; }
