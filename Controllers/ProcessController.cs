@@ -31,7 +31,7 @@ namespace EscAdv.Controllers
 
       if (!String.IsNullOrEmpty(search))
       {
-        process = process.Where(s => s.title.ToUpper().Contains(search.ToUpper()));
+        process = process.Where(s => s.type.ToUpper().Contains(search.ToUpper()));
       }
 
       return View(await process.ToListAsync());
@@ -66,7 +66,7 @@ namespace EscAdv.Controllers
     // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create([Bind("id,title,type,petition")] Process process)
+    public async Task<IActionResult> Create([Bind("id,title,type,petition,created")] Process process)
     {
       if (ModelState.IsValid)
       {
@@ -98,7 +98,7 @@ namespace EscAdv.Controllers
     // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(int id, [Bind("id,title,type,petition")] Process process)
+    public async Task<IActionResult> Edit(int id, [Bind("id,title,type,petition,created")] Process process)
     {
       if (id != process.id)
       {

@@ -10,7 +10,7 @@
 
 <form asp-controller="Process" asp-action="Index">
     <p>
-        Processo: <input type="text" name="search">
+        Tipo Processo: <input type="text" name="search">
         <input type="submit" value="Buscar" />
     </p>
 </form>
@@ -35,6 +35,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.petition)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -49,6 +52,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.petition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created)
             </td>
             <td>
                 <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.id">Detalhar</a> 

@@ -3,14 +3,16 @@ using System;
 using EscAdv.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EscAdv.Migrations
 {
     [DbContext(typeof(EscAdvContext))]
-    partial class EscAdvContextModelSnapshot : ModelSnapshot
+    [Migration("20200603004455_createdColumn")]
+    partial class createdColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

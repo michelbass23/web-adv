@@ -7,7 +7,7 @@ namespace EscAdv.Models
     {
         public int id { get; set; }
 
-        [Display(Name = "Título")]
+        [Display(Name = "Cliente")]
         public string title { get; set; }
 
         [Display(Name = "Tipo Processo")]
@@ -15,7 +15,9 @@ namespace EscAdv.Models
 
         [Display(Name = "Número Petição")]
         public string petition { get; set; }
-        // [DataType(DataType.Date)]
-        // public DateTime created { get; set; }
+
+        [Display(Name = "Data de Entrada")]
+        [DataType(DataType.Date)]
+        public DateTime created { get; set; }
     }
 }

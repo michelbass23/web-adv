@@ -23,19 +23,22 @@ namespace EscAdv.Models
 
                 context.Process.AddRange(
                   new Process{
-                    title = "Processo Criminal",
+                    title = "Felipe",
                     type = "Criminal",
-                    petition = "1547854"
+                    petition = "1547854",
+                    created = DateTime.Parse("2018-1-11")
                   },
                   new Process{
-                    title = "Processo Administrativo",
+                    title = "Edmar",
                     type = "Administrativo",
-                    petition = "5472014"
+                    petition = "5472014",
+                    created = DateTime.Parse("2019-1-11")
                   },
                   new Process{
-                    title = "Processo Previdênciário",
+                    title = "Giovanna",
                     type = "Previdênciário",
-                    petition = "7540325"
+                    petition = "7540325",
+                    created = DateTime.Parse("2020-1-11")
                   }
                 );
                 context.SaveChanges();
